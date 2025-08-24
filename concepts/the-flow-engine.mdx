@@ -1,0 +1,26 @@
+---
+title: "The Flow Engine"
+description: "A deterministic, stateful execution layer for guaranteed outcomes."
+icon: "gears"
+---
+
+Underpinning the Orchestrator and the Context Spine is the Flow Engine, the stateful execution layer that ensures every workflow is executed with precision, predictability, and resilience.
+
+The Flow Engine is designed to provide enterprise-grade guarantees about the state of your AI-driven work. It is not a "best-effort" system; it is a deterministic engine that provides full control over side effects and enables powerful debugging and auditing capabilities.
+
+### Core Architectural Features
+
+<CardGroup cols={2}>
+  <Card title="Deterministic DAGs" icon="diagram-project">
+    Every workflow is executed as a deterministic Directed Acyclic Graph (DAG) or state machine. This ensures that for a given input and `cadance.yaml` spec, the outcome will be the same every time.
+  </Card>
+  <Card title="Guarded Side Effects" icon="shield-halved">
+    Any interaction with external systems is treated as a guarded side effect. The Flow Engine includes robust mechanisms for timeouts, retries, and error handling, ensuring that the system is resilient to external failures.
+  </-Card>
+  <Card title="Time-Travel Debugging" icon="clock-rotate-left">
+    The stateful nature of the Flow Engine allows for replays and diffs of workflow executions. This "time-travel debugging" is a powerful capability for understanding and resolving issues.
+  </Card>
+  <Card title="Late Binding" icon="puzzle-piece">
+    The Flow Engine supports the late binding of experts and tools. This means that the Orchestrator can make decisions about which agent or tool to use at the last possible moment, based on the most up-to-date signals from the environment.
+  </Card>
+</CardGroup>
