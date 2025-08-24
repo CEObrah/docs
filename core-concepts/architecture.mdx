@@ -1,0 +1,50 @@
+---
+title: "Architecture"
+description: "A high-level overview of the MindLab platform architecture."
+icon: "sitemap"
+---
+
+## System Architecture
+
+MindLab is a sophisticated, enterprise-grade intelligence layer designed to solve the critical challenges of AI adoption in business. It is not a single AI, but a coordinated ecosystem of specialist agents that are managed by a powerful orchestration engine.
+
+### Architectural Planes: Control vs. Data
+
+The architecture comprises two distinct logical planes, allowing for a clean separation of concerns between governance and execution:
+
+*   **The Control Plane:** This is the "brain" of the system. The Orchestrator reads the CADANCE™ spec, resolves policies, discovers experts, and orchestrates workflows. It is responsible for enforcing budgets, security gates, and all other aspects of governance.
+*   **The Data Plane:** This is the "hands" of the system. The specialist agents (experts) retrieve domain knowledge from the Context Spine, read and write to memory tiers, call external tools and services, produce outputs that comply with predefined schemas, and emit detailed metrics and traces for logging and analysis.
+
+### System Data-Flow Diagram
+
+The following diagram illustrates the high-level data flow between the core components of the MindLab platform:
+
+```mermaid
+flowchart LR
+  subgraph Control_Plane["Control Plane"]
+    Intent[User Intent / API Call] --> Spec[CADANCE Spec]
+    Spec --> Orchestrator[Orchestrator (Runtime MoE)]
+    Orchestrator --> Policy[Policy Engine]
+    Orchestrator --> Registry[Expert Registry]
+    Orchestrator --> Flow[Flow Engine]
+    Policy --> Flow
+    Registry --> Flow
+  end
+  subgraph Data_Plane["Data Plane"]
+    Knowledge[(Knowledge Index)]
+    Memory[(Memory Tiers)]
+    Tools[Tool & Service Adapters]
+    Validator[Output Validators]
+    Audit[(Audit Logs & Traces)]
+    Eval[Evaluation Loop]
+    Consumers[(Result Consumers)]
+  end
+  Flow -- retrieve --> Knowledge
+  Flow -- read/write --> Memory
+  Flow -- tool call --> Tools
+  Flow -- typed output --> Validator
+  Validator -- results + citations --> Consumers
+  Flow -- traces --> Audit
+  Audit -- replays/diffs --> Orchestrator
+  Flow --> Eval
+  Eval -- scores --> Policy

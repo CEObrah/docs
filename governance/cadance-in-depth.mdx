@@ -28,3 +28,20 @@ The CADANCE™ spec moves through distinct stages:
 4.  **Promote:** Validated specs are promoted to staging and production environments.
 5.  **Run:** The orchestrator reads the spec, constructs flows, and executes tasks.
 6.  **Audit:** After execution, logs, prompts, citations, and outputs are stored for audit and evaluation.
+```mermaid
+sequenceDiagram
+  participant Author
+  participant Validator
+  participant Repository
+  participant Orchestrator
+  participant AuditLog
+  Author->>Validator: Submit cadance.yaml
+  Validator-->>Author: Schema validation / policy check
+  Validator->>Repository: Commit valid spec
+  Repository-->>Validator: Version ID
+  Validator->>Orchestrator: Promote spec to prod
+  Orchestrator-->>Validator: Spec accepted
+  Orchestrator->>AuditLog: Log spec version
+  Orchestrator->>Orchestrator: Execute workflow
+  Orchestrator->>AuditLog: Store run logs
+```

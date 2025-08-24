@@ -28,6 +28,7 @@
         "group": "Core Concepts",
         "pages": [
           "core-concepts/the-mindlab-platform",
+          "core-concepts/architecture",
           "concepts/the-orchestrator",
           "concepts/the-flow-engine",
           "concepts/the-context-spine",
@@ -36,7 +37,8 @@
           "concepts/models",
           "core-concepts/tools-in-depth",
           "concepts/continuous-improvement",
-          "concepts/how-mindlab-learns"
+          "concepts/how-mindlab-learns",
+          "core-concepts/glossary"
         ]
       },
       {
@@ -98,7 +100,6 @@
           {
             "group": "Education",
             "pages": [
-              "use-cases/education/overview",
               "use-cases/education/personalized-tutoring-in-action",
               "use-cases/education/new-teacher-onboarding",
               "use-cases/education/parent-teacher-meeting-prep",
@@ -141,48 +142,6 @@
               "use-cases/industry/manufacturing-and-industry-4-0",
               "use-cases/industry/public-sector-and-gov",
               "use-cases/industry/retail-and-ecommerce"
-            ]
-          }
-        ]
-      },
-      {
-        "group": "Whitepapers",
-        "pages": [
-          {
-            "group": "Public Whitepaper",
-            "pages": [
-              "public-whitepaper/executive-summary",
-              "public-whitepaper/introduction-and-motivation",
-              "public-whitepaper/mindlab-architecture",
-              "public-whitepaper/cadance-overview",
-              "public-whitepaper/education-proof",
-              "public-whitepaper/controls-and-governance",
-              "public-whitepaper/roadmap",
-              "public-whitepaper/risks-and-mitigations",
-              "public-whitepaper/call-to-action"
-            ]
-          },
-          {
-            "group": "Gated Whitepaper",
-            "pages": [
-              "gated-whitepaper/executive-summary",
-              "gated-whitepaper/introduction-and-motivation",
-              "gated-whitepaper/system-overview",
-              "gated-whitepaper/cadance-specification",
-              "gated-whitepaper/orchestrator",
-              "gated-whitepaper/expert-registry-and-skill-graph",
-              "gated-whitepaper/context-spine",
-              "gated-whitepaper/flow-engine",
-              "gated-whitepaper/evaluation-loop",
-              "gated-whitepaper/controls-security-and-governance",
-              "gated-whitepaper/deployment-and-operations",
-              "gated-whitepaper/benchmarks-and-methodology",
-              "gated-whitepaper/case-studies",
-              "gated-whitepaper/economics-and-business-model",
-              "gated-whitepaper/related-work",
-              "gated-whitepaper/risks-limitations-and-ethics",
-              "gated-whitepaper/roadmap",
-              "gated-whitepaper/conclusion"
             ]
           }
         ]
