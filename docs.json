@@ -25,6 +25,16 @@
         ]
       },
       {
+        "group": "Getting Started",
+        "pages": [
+          "getting-started/creating-your-first-workspace",
+          "getting-started/provisioning-your-first-agent",
+          "getting-started/writing-your-first-cadance-spec",
+          "getting-started/your-first-conversation",
+          "getting-started/understanding-the-results"
+        ]
+      },
+      {
         "group": "Core Concepts",
         "pages": [
           "core-concepts/the-mindlab-platform",
@@ -38,52 +48,13 @@
           "core-concepts/tools-in-depth",
           "governance/cadance",
           "concepts/continuous-improvement",
-          "concepts/how-mindlab-learns",
-          "core-concepts/glossary"
-        ]
-      },
-      {
-        "group": "Getting Started",
-        "pages": [
-          "getting-started/creating-your-first-workspace",
-          "getting-started/provisioning-your-first-agent",
-          "getting-started/writing-your-first-cadance-spec",
-          "getting-started/your-first-conversation",
-          "getting-started/understanding-the-results"
-        ]
-      },
-      {
-        "group": "Platform",
-        "pages": [
-          "platform/expert-registry",
-          "platform/evaluation-loop",
-          "platform/production-controls"
-        ]
-      },
-      {
-        "group": "Onboarding & Data",
-        "pages": [
-          "onboarding/white-glove-onboarding",
-          "onboarding/ongoing-data-ingestion",
-          "onboarding/data-security-and-privacy"
-        ]
-      },
-      {
-        "group": "Governance",
-        "pages": [
-          "governance/organizational-model"
-        ]
-      },
-      {
-        "group": "Security",
-        "pages": [
-          "security/our-commitment-to-security",
-          "security/ferpa-and-hipaa-compliance"
+          "concepts/how-mindlab-learns"
         ]
       },
       {
         "group": "Use Cases",
         "pages": [
+          "governance/domain-packs",
           {
             "group": "Education",
             "pages": [
@@ -130,13 +101,36 @@
               "use-cases/industry/public-sector-and-gov",
               "use-cases/industry/retail-and-ecommerce"
             ]
-          },
-          {
-            "group": "Domain Packs",
-            "pages": [
-              "governance/domain-packs"
-            ]
           }
+        ]
+      },
+      {
+        "group": "Platform",
+        "pages": [
+          "platform/expert-registry",
+          "platform/evaluation-loop",
+          "platform/production-controls"
+        ]
+      },
+      {
+        "group": "Governance",
+        "pages": [
+          "governance/organizational-model"
+        ]
+      },
+      {
+        "group": "Security",
+        "pages": [
+          "security/our-commitment-to-security",
+          "security/ferpa-and-hipaa-compliance"
+        ]
+      },
+      {
+        "group": "Onboarding & Data",
+        "pages": [
+          "onboarding/white-glove-onboarding",
+          "onboarding/ongoing-data-ingestion",
+          "onboarding/data-security-and-privacy"
         ]
       }
     ]
