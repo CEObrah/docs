@@ -11,21 +11,54 @@
   "navigation": {
     "tabs": [
       {
-        "tab": "User Guide",
+        "tab": "MindLab EDU",
         "groups": [
           {
             "group": "Introduction",
             "pages": [
-              "introduction/welcome",
-              "introduction/what-is-mindlab",
-              "introduction/the-ai-implementation-gap"
+              "mindlab-edu/the-learning-continuity-system",
+              "mindlab-edu/personal-ai-agents-with-memory"
             ]
           },
           {
-            "group": "Getting Started",
+            "group": "For School Leaders",
             "pages": [
-              "getting-started/your-first-agent",
-              "getting-started/understanding-the-dashboard"
+              "for-school-leaders/admin-insight-dashboard",
+              "for-school-leaders/program-and-curriculum-evaluation"
+            ]
+          },
+          {
+            "group": "For Teachers",
+            "pages": [
+              "for-teachers/the-teacher-workspace",
+              "for-teachers/prep-and-planning"
+            ]
+          },
+          {
+            "group": "For Parents",
+            "pages": [
+              "for-parents/the-parent-view",
+              "for-parents/transparent-progress-updates"
+            ]
+          },
+          {
+            "group": "For Students",
+            "pages": [
+              "for-students/the-student-portal",
+              "for-students/personalized-tutoring"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "groups": [
+          {
+            "group": "Use Cases in Detail",
+            "pages": [
+              "use-cases/new-teacher-onboarding",
+              "use-cases/personalized-tutoring-in-action",
+              "use-cases/parent-teacher-meeting-prep"
             ]
           }
         ]
@@ -36,29 +69,62 @@
           {
             "group": "The MindLab Architecture",
             "pages": [
-              "concepts/intelligent-orchestration",
-              "concepts/persistent-memory",
-              "concepts/continuous-improvement"
+              "core-concepts/the-orchestrator-in-depth",
+              "core-concepts/the-context-spine-in-depth",
+              "core-concepts/the-flow-engine-in-depth"
             ]
           }
         ]
       },
       {
-        "tab": "Use Cases",
+        "tab": "Onboarding & Data",
         "groups": [
           {
-            "group": "Industry Solutions",
+            "group": "Onboarding & Data",
             "pages": [
-              "use-cases/education",
-              "use-cases/healthcare",
-              "use-cases/finance"
+              "onboarding/white-glove-onboarding",
+              "onboarding/ongoing-data-ingestion"
             ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Whitepaper",
+        "groups": [
           {
-            "group": "Cross-Industry Solutions",
+            "group": "Whitepaper",
             "pages": [
-              "use-cases/customer-support",
-              "use-cases/sales-and-marketing"
+              "whitepaper/executive-summary",
+              "whitepaper/introduction-and-motivation",
+              "whitepaper/system-overview",
+              "whitepaper/cadance-specification",
+              "whitepaper/orchestrator",
+              "whitepaper/expert-registry-and-skill-graph",
+              "whitepaper/context-spine",
+              "whitepaper/flow-engine",
+              "whitepaper/evaluation-loop",
+              "whitepaper/controls-security-and-governance",
+              "whitepaper/deployment-and-operations",
+              "whitepaper/benchmarks-and-methodology",
+              "whitepaper/case-studies",
+              "whitepaper/economics-and-business-model",
+              "whitepaper/related-work",
+              "whitepaper/risks-limitations-and-ethics",
+              "whitepaper/roadmap",
+              "whitepaper/conclusion"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Appendices",
+        "groups": [
+          {
+            "group": "Appendices",
+            "pages": [
+              "appendices/cadance-schema-and-full-example",
+              "appendices/evaluation-rubrics-and-golden-sets",
+              "appendices/security-model"
             ]
           }
         ]
@@ -68,7 +134,7 @@
       "anchors": [
         {
           "anchor": "MindLab Home",
-          "href": "https://mindlab.com",
+          "href": "https://mindlab.io",
           "icon": "house"
         }
       ]
@@ -82,13 +148,13 @@
     "links": [
       {
         "label": "Request a Demo",
-        "href": "https://mindlab.com/contact"
+        "href": "https://mindlab.io/contact"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Login",
-      "href": "https://app.mindlab.com"
+      "href": "https://app.mindlab.io"
     }
   },
   "footer": {

@@ -1,0 +1,29 @@
+---
+title: "The Context Spine: In-Depth"
+description: "A detailed look at the stateful architecture and memory tiers that power the MindLab platform."
+---
+
+MindLab is a stateful system by design. Unlike stateless tools that suffer from corporate amnesia, our platform is built on the Context Spine, a sophisticated architecture for managing knowledge and memory across your entire organization.
+
+## Evidence-First Retrieval
+
+The foundation of the Context Spine is an "evidence-first" approach. Before an agent acts, it performs a planning-aware query against the available knowledge sources. This ensures that all actions are grounded in verifiable data, and all outputs are accompanied by source-linked citations. This is a critical capability for auditable, enterprise-grade AI.
+
+## Memory Tiers
+
+The Context Spine is not a monolithic database; it is a tiered system designed to provide the right level of context at the right time.
+
+<AccordionGroup>
+  <Accordion title="Scratchpads">
+    Ephemeral, short-term memory used by an agent during the execution of a single task. This is where the agent "thinks," breaking down problems and formulating plans.
+  </Accordion>
+  <Accordion title="Session Memory">
+    Context that persists for the duration of a single user session. This allows an agent to remember the immediate history of the conversation and provide a more natural, interactive experience.
+  </Accordion>
+  <Accordion title="User/Team Memory">
+    Durable memory that is scoped to a specific user or team. This is where the system stores preferences, project details, and other long-term contextual information.
+  </Accordion>
+  <Accordion title="Durable Summaries">
+    Periodically, the system synthesizes the most important information from the other memory tiers into durable summaries. These summaries are governed by strict retention policies and form the long-term, compounding knowledge asset of the organization.
+  </Accordion>
+</AccordionGroup>

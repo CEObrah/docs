@@ -1,0 +1,90 @@
+---
+title: "Appendix A: CADANCE™ Schema & Full Example"
+description: "The full schema and a complete example of the CADANCE™ Specification."
+---
+
+## CADANCE™ Schema
+
+```yaml
+Config:
+  objective: string
+  success_criteria: string
+  budget:
+    cost: float
+    latency: string
+
+Agents:
+  - role: string
+    capability: string
+    constraints:
+      max_tokens: int
+
+Data:
+  - source: string
+    contract: string
+    citation_policy: string
+
+Analysis:
+  - output: string
+    schema: string
+    evaluator: string
+
+Norms:
+  policy: string
+  approvals: string
+
+Controls:
+  graph: string
+  retries: int
+  timeout: string
+
+Execution:
+  runbook: string
+  logging: string
+  retention: string
+```
+
+## Full Example
+
+```yaml
+Config:
+  objective: "Analyze a financial news article for key points and sentiment."
+  success_criteria: "A concise summary and a sentiment score (positive, negative, neutral)."
+  budget:
+    cost: 1.00 # Max cost in USD
+    latency: 60s # Max latency in seconds
+
+Agents:
+  - role: "Summarizer"
+    capability: "text-summarization"
+    constraints:
+      max_tokens: 250
+  - role: "SentimentAnalyzer"
+    capability: "sentiment-analysis"
+
+Data:
+  - source: "article_url"
+    contract: "publicly-accessible-html"
+    citation_policy: "required"
+
+Analysis:
+  - output: "summary"
+    schema: "text"
+    evaluator: "Summarizer"
+  - output: "sentiment"
+    schema: "enum(positive, negative, neutral)"
+    evaluator: "SentimentAnalyzer"
+
+Norms:
+  policy: "internal-research-policy"
+  approvals: "none"
+
+Controls:
+  graph: "Summarizer -> SentimentAnalyzer"
+  retries: 2
+  timeout: 30s
+
+Execution:
+  runbook: "standard-analysis-runbook"
+  logging: "info"
+  retention: "30d"

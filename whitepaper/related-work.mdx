@@ -1,0 +1,52 @@
+---
+title: "14. Related Work"
+description: "A look at how MindLab relates to other work in the field of AI."
+---
+
+## Overview
+
+The MindLab platform builds on a rich body of work in the field of artificial intelligence. Our approach is a synthesis of several key ideas, and it is important to understand how our work relates to other approaches.
+
+## Training-Time MoE vs. Runtime MoE
+
+The concept of a "Mixture-of-Experts" (MoE) is not new. However, most of the work in this area has focused on "training-time MoE," where massive, sparse models are created. While powerful, these models are rigid and expensive to change.
+
+MindLab's "runtime MoE" is a more agile and adaptable paradigm. Instead of relying on a single, static model, the Orchestrator dynamically routes tasks to a diverse registry of specialized agents. This allows for continuous improvement and adaptation without the need to retrain foundational models.
+
+## Agentic Frameworks
+
+There are a number of open-source and commercial frameworks for building AI agents. While these frameworks are powerful, they are typically focused on the developer experience.
+
+MindLab is different. We are not a tool for developers to build their own agents from scratch. Instead, we are a full-service platform that allows organizations to "hire" pre-built, specialist AI agents and deploy them into their existing workflows.
+
+## Retrieval Systems
+
+The field of retrieval-augmented generation (RAG) has made significant advances in recent years. While we leverage many of these techniques in our Context Spine, our approach is different in a few key ways.
+
+<CardGroup cols={3}>
+  <Card title="Evidence-First" icon="file-check-2">
+    We take an "evidence-first" approach, where every action is grounded in verifiable data.
+  </Card>
+  <Card title="Planning-Aware" icon="sitemap">
+    Our retrieval strategies are "planning-aware," which means that they are designed to work in concert with our Orchestrator.
+  </Card>
+  <Card title="Cross-Turn Coherence" icon="link">
+    We have a mechanism for ensuring cross-turn coherence, which is critical for building a true, stateful intelligence layer.
+  </Card>
+</CardGroup>
+
+## Eval Toolchains
+
+There are a number of excellent toolchains for evaluating the performance of AI models. While we use many of these tools in our own internal evaluation process, our Evaluation Loop is different in a few key ways.
+
+<AccordionGroup>
+  <Accordion title="Continuous">
+    Our evaluation process is continuous, not a one-time event.
+  </Accordion>
+  <Accordion title="Holistic">
+    We take a holistic approach to evaluation, measuring not just the accuracy of our models, but also their alignment with your business objectives.
+  </Accordion>
+  <Accordion title="Actionable">
+    The outputs of our Evaluation Loop are not just reports; they are actionable signals that are used to shape the behavior of our platform over time.
+  </Accordion>
+</AccordionGroup>
