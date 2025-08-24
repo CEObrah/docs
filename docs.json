@@ -10,6 +10,13 @@
   "favicon": "/favicon.svg",
   "navigation": [
     {
+      "group": "Home",
+      "pages": [
+        "index",
+        "quickstart"
+      ]
+    },
+    {
       "group": "Introduction",
       "pages": [
         "introduction/welcome",
@@ -20,7 +27,6 @@
     {
       "group": "Getting Started",
       "pages": [
-        "quickstart",
         "getting-started/creating-your-first-workspace",
         "getting-started/provisioning-your-first-agent",
         "getting-started/writing-your-first-cadance-spec",
@@ -251,7 +257,8 @@
     {
         "group": "Development",
         "pages": [
-            "development"
+            "development",
+            "README"
         ]
     }
   ],
