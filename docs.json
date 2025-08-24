@@ -29,29 +29,17 @@
         "pages": [
           "core-concepts/the-mindlab-platform",
           "core-concepts/architecture",
-          "concepts/the-orchestrator",
-          "concepts/the-flow-engine",
-          "concepts/the-context-spine",
-          "concepts/agents",
-          "concepts/teams",
-          "concepts/models",
+          "core-concepts/orchestrator",
+          "core-concepts/flow-engine",
+          "core-concepts/context-spine",
+          "core-concepts/agents",
+          "core-concepts/teams",
+          "core-concepts/models",
           "core-concepts/tools-in-depth",
+          "governance/cadance",
           "concepts/continuous-improvement",
           "concepts/how-mindlab-learns",
           "core-concepts/glossary"
-        ]
-      },
-      {
-        "group": "In-Depth",
-        "pages": [
-          "core-concepts/the-orchestrator-in-depth",
-          "core-concepts/the-flow-engine-in-depth",
-          "core-concepts/the-context-spine-in-depth",
-          "core-concepts/agents-in-depth",
-          "core-concepts/teams-in-depth",
-          "core-concepts/models-in-depth",
-          "governance/cadance-in-depth",
-          "governance/security-and-compliance-in-depth"
         ]
       },
       {
@@ -83,8 +71,7 @@
       {
         "group": "Governance",
         "pages": [
-          "governance/organizational-model",
-          "governance/domain-packs"
+          "governance/organizational-model"
         ]
       },
       {
@@ -142,6 +129,12 @@
               "use-cases/industry/manufacturing-and-industry-4-0",
               "use-cases/industry/public-sector-and-gov",
               "use-cases/industry/retail-and-ecommerce"
+            ]
+          },
+          {
+            "group": "Domain Packs",
+            "pages": [
+              "governance/domain-packs"
             ]
           }
         ]

@@ -1,0 +1,41 @@
+---
+title: "The Context Spine"
+description: "A deep dive into the stateful architecture and memory tiers that power the MindLab platform."
+---
+
+MindLab is a stateful system by design. Unlike stateless tools that suffer from corporate amnesia, our platform is built on the Context Spine, a sophisticated architecture for managing knowledge and memory across your entire organization.
+
+Have you ever had to re-explain the same thing to a chatbot multiple times? This frustrating experience is the hallmark of a stateless AI. It has no memory of past interactions, so every conversation starts from a blank slate.
+
+### The Power of Persistent Memory
+
+A stateful AI is a game-changer for enterprise workflows.
+
+-   **It Remembers Your Preferences:** You can tell a MindLab agent your preferences once, and it will remember them in all future interactions.
+-   **It Understands Your Projects:** As you work on a project, the AI builds a rich contextual understanding of the key players, deadlines, and objectives.
+-   **It Learns from Your Feedback:** If you correct an agent's output, it learns from that feedback and will not make the same mistake again.
+
+### A Compounding Knowledge Asset
+
+This persistent memory does more than just improve the user experience. It transforms your AI from a simple tool into a compounding knowledge asset.
+
+As your teams interact with the MindLab platform, they are collectively building a powerful, evolving model of your institutional knowledge. This asset grows more valuable over time, driving continuous improvement and unlocking new efficiencies across your entire organization.
+
+## Evidence-First Retrieval
+
+The foundation of the Context Spine is an "evidence-first" approach. Before an agent acts, it performs a planning-aware query against the available knowledge sources. This ensures that all actions are grounded in verifiable data, and all outputs are accompanied by source-linked citations.
+
+## Memory Tiers
+
+The Context Spine is not a monolithic database; it is a tiered system designed to provide the right level of context at the right time.
+
+-   **Scratchpads:** Ephemeral, short-term memory used by an agent during the execution of a single task.
+-   **Session Memory:** Context that persists for the duration of a single user session.
+-   **User/Team Memory:** Durable memory that is scoped to a specific user or team.
+-   **Durable Summaries:** Periodically, the system synthesizes the most important information from the other memory tiers into durable summaries.
+
+```mermaid
+graph TD
+    A[Scratchpads] --> B(Session Memory);
+    B --> C{User/Team Memory};
+    C --> D[Durable Summaries];

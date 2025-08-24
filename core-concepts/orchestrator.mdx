@@ -1,0 +1,55 @@
+---
+title: "The Orchestrator"
+description: "A deep dive into the runtime Mixture-of-Experts (MoE) engine that powers the MindLab platform."
+---
+
+The core of the MindLab platform is the Orchestrator. It is not a single, monolithic AI, but a runtime Mixture-of-Experts (MoE) engine that intelligently coordinates the work of specialized agents to achieve complex business objectives.
+
+The primary way you will interact with the MindLab platform is through a sophisticated chat interface. This is your direct line to the Orchestrator, the powerful intelligence layer that coordinates the work of all your provisioned AI agents.
+
+You do not need to know which agent is best for a particular task. Your role is simply to state your objective in natural language. The Orchestrator will handle the rest.
+
+### From Intent to Audited Outcome
+
+When you submit a request, the Orchestrator initiates a multi-step process that is designed to transform your intent into a reliable, auditable outcome.
+
+1.  **Understanding Your Goal:** The Orchestrator first analyzes your request to understand your underlying business objective.
+2.  **Selecting the Right Team:** It then queries the [Expert Registry](/whitepaper/expert-registry-and-skill-graph) to assemble the perfect team of specialist agents for the job.
+3.  **Coordinating the Work:** The Orchestrator manages the entire workflow, breaking your request down into sub-tasks, routing them to the appropriate agents, and synthesizing their work into a final, cohesive result.
+4.  **Delivering the Results:** The final output is delivered to you in the chat interface, complete with source-linked citations and a full audit trail.
+
+### The Power of Natural Language
+
+Because you are interacting with a sophisticated orchestration engine, you can express your requests in high-level, outcome-oriented language.
+
+**Instead of saying:** "Summarize the text at URL X, then analyze its sentiment."
+
+**You can simply say:** "Tell me what's important about this article and how I should feel about it."
+
+The Orchestrator understands the intent behind your words and will automatically engage the right agents to get the job done. This is the power of a true intelligence layer.
+
+## Runtime MoE vs. Training-time MoE
+
+Traditional AI development has focused on "training-time MoE," where massive, sparse models are created. While powerful, these models are rigid and expensive to change.
+
+MindLab's "runtime MoE" is a more agile and adaptable paradigm. Instead of relying on a single, static model, the Orchestrator dynamically routes tasks to a diverse registry of specialized agents.
+
+## The Orchestration Process
+
+The Orchestrator's primary function is to factorize user intent into a series of atomic, testable sub-tasks and then route those tasks to the most appropriate specialist agent.
+
+<Steps>
+  <Step title="Factorization">
+    The Orchestrator receives a high-level objective and breaks it down into a directed acyclic graph (DAG) of smaller, well-defined sub-tasks.
+  </Step>
+  <Step title="Routing">
+    For each sub-task, the Orchestrator queries the Expert Registry to find the optimal agent.
+  </Step>
+  <Step title="Execution">
+    The Orchestrator dispatches the sub-tasks and monitors their execution via the Flow Engine.
+  </Step>
+</Steps>
+
+<Tip>
+A common and powerful topology for this process is a **Planner → Solver → Reviewer → Verifier** chain.
+</Tip>
