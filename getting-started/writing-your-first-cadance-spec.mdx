@@ -1,0 +1,39 @@
+---
+title: "Writing Your First CADANCE™ Spec"
+description: "A tutorial on how to write a simple CADANCE™ spec."
+icon: "file-code"
+---
+
+The CADANCE™ spec is the heart of the MindLab platform. It is a declarative, version-controlled contract that defines the entire lifecycle of an AI-driven workflow.
+
+This tutorial will walk you through the process of writing your first CADANCE™ spec.
+
+## Step 1: Define Your Objective
+
+The first step is to define the high-level objective of your workflow. For this tutorial, we will create a simple workflow that analyzes the sentiment of a piece of text.
+
+## Step 2: Define Your Agents
+
+Next, we will define the agents that will be involved in the workflow. For this simple workflow, we will only need one agent: a "SentimentAnalyzer".
+
+## Step 3: Define Your Data
+
+Next, we will define the data that will be used in the workflow. In this case, the data will be the text that we want to analyze.
+
+## Step 4: Define Your Analysis
+
+Next, we will define the analysis that will be performed on the data. In this case, we will simply output the sentiment of the text.
+
+## Step 5: Putting It All Together
+
+Here is the complete CADANCE™ spec for our simple workflow:
+
+```yaml
+Config:
+  objective: "Analyze the sentiment of a piece of text."
+Agents:
+  - role: "SentimentAnalyzer"
+Data:
+  text: "I love MindLab!"
+Analysis:
+  output: "{{SentimentAnalyzer.sentiment}}"

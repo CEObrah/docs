@@ -1,0 +1,28 @@
+---
+title: "MindLab Architecture"
+description: "An overview of the MindLab architecture."
+---
+
+MindLab is an organizational intelligence layer that sits between intent and impact. It coordinates the work behind the work.
+
+## How it works
+
+A runtime mixture of experts factorizes objectives into atomic tasks and routes each task to the best specialist under policy, budget, and memory.
+
+## Components
+
+-   **Orchestrator:** The brain of the system.
+-   **Expert Registry:** A curated marketplace of specialist agents.
+-   **Context Spine:** A tiered memory system.
+-   **Flow Engine:** A deterministic, stateful execution layer.
+-   **Evaluation Loop:** A continuous process for ensuring quality.
+-   **Controls:** A suite of robust controls for safety, stability, and auditability.
+
+```mermaid
+graph TD
+    A[Intent] --> B(Orchestrator);
+    B --> C{Expert Registry};
+    B --> D[Context Spine];
+    B --> E[Flow Engine];
+    E --> F(Evaluation Loop);
+    E --> G(Controls);

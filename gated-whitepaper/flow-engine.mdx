@@ -1,0 +1,44 @@
+---
+title: "7. Flow Engine: State & Guarantees"
+description: "The Flow Engine is a deterministic, stateful execution layer that provides enterprise-grade guarantees for AI-driven workflows."
+---
+
+## 7.1 Overview
+
+The Flow Engine executes the plans produced by the orchestrator. It runs workflows as deterministic DAGs or state machines, ensures side effects are controlled and provides mechanisms for retries, timeouts, compensation and replay. Without a stateful engine, AI outputs are best-effort; with the Flow Engine, they become dependable.
+
+## 7.2 Design Rationale
+
+Enterprise workflows involve external systems, multiple actors and long-running processes. The Flow Engine provides:
+
+- **Determinism:** Given the same CADANCE™ spec, inputs and seeds, the outcome is identical.
+- **Control of Side Effects:** External calls are wrapped in transactions or idempotent wrappers.
+- **Time-Travel Debugging:** All intermediate states are stored, allowing replays and diffs.
+
+## 7.3 Core Features
+
+- **Deterministic Execution:** Each node in the DAG is executed with pre-specified seeds and budgets.
+- **Guarded Side Effects:** Calls to external systems are wrapped in guard clauses.
+- **Retry & Timeout Policies:** The CADANCE™ Controls section defines per-step retries and timeouts.
+- **Replays & Diffs:** The engine stores a run journal.
+
+## 7.4 Data/Interfaces
+
+The Flow Engine exposes APIs to create, monitor and replay runs.
+
+## 7.5 Failure Modes & Mitigations
+
+- **Workflow Failure:** A critical step fails repeatedly. Mitigation: propagate error to orchestrator; compensate side effects.
+- **State Corruption:** A bug leads to inconsistent state. Mitigation: transaction boundaries; snapshotting.
+
+## 7.6 Metrics & SLOs
+
+- **Workflow Completion Rate:** > [METRIC_PLACEHOLDER] %
+- **Mean Time to Recovery (MTTR):** < [METRIC_PLACEHOLDER] s
+- **Reproducibility Rate:** Fraction of replays that match the original run exactly.
+
+## 7.7 Key Takeaways
+
+- The Flow Engine turns best-effort AI predictions into reliable workflows.
+- It ensures determinism, enabling debugging and compliance.
+- Replays, diffs and compensation functions elevate debugging and auditing to first-class capabilities.

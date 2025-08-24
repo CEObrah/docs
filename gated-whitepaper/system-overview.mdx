@@ -1,0 +1,59 @@
+---
+title: "2. System Overview"
+description: "MindLab is a layer between your applications and your workflows, composed of a control plane and a data plane."
+---
+
+MindLab is a layer between your applications and your workflows. It receives intents (natural-language tasks or API calls), interprets them through CADANCE™, factorizes them via the orchestrator, selects experts from the registry, retrieves knowledge and memory, executes flows in the engine and logs everything for evaluation and audit. The system can run in the cloud, on-premises or air-gapped environments.
+
+## 2.1 Control Plane vs Data Plane
+
+The architecture comprises two planes:
+
+- **Control Plane:** The orchestrator reads the CADANCE™ spec, resolves policies, discovers experts and orchestrates flows. It enforces budgets, gates and governance.
+- **Data Plane:** Experts retrieve domain knowledge from the Context Spine, read/write memories, call external tools and services, produce outputs that comply with schemas and emit metrics and traces. The evaluation loop consumes logs and produces signals back to the control plane.
+
+## 2.2 Core Components
+
+- **Orchestrator (runtime MoE):** Converts high-level objectives into a DAG or state machine of sub-tasks, routes each to the best agent and enforces policies. It supports dynamic topologies such as Planner→Solver→Reviewer→Verifier.
+- **Expert Registry:** A directed skill graph of typed specialists (agents). Each agent advertises its capabilities, constraints, tool affordances and load limits. Hard filters (e.g., policy, data boundaries) and soft priors (confidence, historical success) determine eligibility.
+- **Context Spine (knowledge + memory):** A tiered memory system (scratchpad, session, user/team, durable) with hybrid retrieval. It stores domain knowledge (docs, tables, specs), conversation histories and long-term summaries. Retrieval strategies are planning-aware and evidence-first, returning citations alongside results.
+- **Flow Engine:** A deterministic, stateful execution layer that runs workflows as DAGs/state machines with retries, guards and compensation. It ensures idempotence and supports time-travel debugging (replays & diffs).
+- **Evaluation Loop:** Continuously measures outputs via golden tasks, rubric scoring and adversarial review. Signals shape policy routing and gating without retraining models.
+- **Controls, Security & Governance:** Implements RBAC, budgets, audit logs, HITL checkpoints and data residency. Data belongs to the organization and is never used to train foundation models.
+
+## 2.3 System Data-Flow Diagram
+
+The following Mermaid diagram illustrates the high-level data flow between components:
+
+```mermaid
+flowchart LR
+  subgraph Control_Plane["Control Plane"]
+    Intent[Manager Intent / Ticket] --> Spec[CADANCE Spec]
+    Spec --> Orchestrator[Orchestrator (Runtime MoE)]
+    Orchestrator --> Policy[Policy Engine]
+    Orchestrator --> Registry[Expert Registry]
+    Orchestrator --> Flow[Flow Engine]
+    Policy --> Flow
+    Registry --> Flow
+  end
+  subgraph Data_Plane["Data Plane"]
+    Knowledge[(Knowledge Index)]
+    Memory[(Memory Tiers)]
+    Tools[Tool & Service Adapters]
+    Validator[Output Validators]
+    Audit[(Audit Logs & Traces)]
+    Eval[Evaluation Loop]
+    Consumers[(Result Consumers)]
+  end
+  Flow -- retrieve --> Knowledge
+  Flow -- read/write --> Memory
+  Flow -- tool call --> Tools
+  Flow -- typed output --> Validator
+  Validator -- results + citations --> Consumers
+  Flow -- traces --> Audit
+  Audit -- replays/diffs --> Orchestrator
+  Flow --> Eval
+  Eval -- scores --> Policy
+```
+
+This separation of control and data allows the platform to enforce governance while scaling data retrieval and tool execution independently.
