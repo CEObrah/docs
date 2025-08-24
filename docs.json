@@ -47,8 +47,13 @@
           "core-concepts/models",
           "core-concepts/tools",
           "governance/cadance",
-          "concepts/continuous-improvement",
-          "concepts/how-mindlab-learns"
+          {
+            "group": "Learning & Improvement",
+            "pages": [
+              "concepts/continuous-improvement",
+              "concepts/how-mindlab-learns"
+            ]
+          }
         ]
       },
       {
