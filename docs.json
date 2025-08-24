@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "linden",
   "name": "MindLab",
   "colors": {
     "primary": "#16A34A",
@@ -8,260 +8,196 @@
     "dark": "#15803D"
   },
   "favicon": "/favicon.svg",
-  "navigation": [
-    {
-      "group": "Home",
-      "pages": [
-        "index",
-        "quickstart"
-      ]
-    },
-    {
-      "group": "Introduction",
-      "pages": [
-        "introduction/welcome",
-        "introduction/what-is-mindlab",
-        "introduction/the-ai-implementation-gap"
-      ]
-    },
-    {
-      "group": "Getting Started",
-      "pages": [
-        "getting-started/creating-your-first-workspace",
-        "getting-started/provisioning-your-first-agent",
-        "getting-started/writing-your-first-cadance-spec",
-        "getting-started/understanding-the-results",
-        "getting-started/your-first-conversation"
-      ]
-    },
-    {
-        "group": "For Students",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Home",
         "pages": [
-            "for-students/the-student-portal",
-            "for-students/personalized-tutoring"
+          "introduction/welcome",
+          "quickstart"
         ]
-    },
-    {
-        "group": "For Teachers",
+      },
+      {
+        "group": "Introduction",
         "pages": [
-            "for-teachers/the-teacher-workspace",
-            "for-teachers/prep-and-planning"
+          "introduction/what-is-mindlab",
+          "introduction/the-ai-implementation-gap",
+          "roadmap/our-vision"
         ]
-    },
-    {
-        "group": "For Parents",
+      },
+      {
+        "group": "Core Concepts",
         "pages": [
-            "for-parents/the-parent-view",
-            "for-parents/transparent-progress-updates"
+          "core-concepts/the-mindlab-platform",
+          "concepts/the-orchestrator",
+          "concepts/the-flow-engine",
+          "concepts/the-context-spine",
+          "concepts/agents",
+          "concepts/teams",
+          "concepts/models",
+          "core-concepts/tools-in-depth",
+          "concepts/continuous-improvement",
+          "concepts/how-mindlab-learns"
         ]
-    },
-    {
-        "group": "For School Leaders",
+      },
+      {
+        "group": "In-Depth",
         "pages": [
-            "for-school-leaders/admin-insight-dashboard",
-            "for-school-leaders/program-and-curriculum-evaluation"
+          "core-concepts/the-orchestrator-in-depth",
+          "core-concepts/the-flow-engine-in-depth",
+          "core-concepts/the-context-spine-in-depth",
+          "core-concepts/agents-in-depth",
+          "core-concepts/teams-in-depth",
+          "core-concepts/models-in-depth",
+          "governance/cadance-in-depth",
+          "governance/security-and-compliance-in-depth"
         ]
-    },
-    {
-        "group": "For Administrators",
+      },
+      {
+        "group": "Getting Started",
         "pages": [
-            "for-administrators/managing-workspaces",
-            "for-administrators/provisioning-agents"
+          "getting-started/creating-your-first-workspace",
+          "getting-started/provisioning-your-first-agent",
+          "getting-started/writing-your-first-cadance-spec",
+          "getting-started/your-first-conversation",
+          "getting-started/understanding-the-results"
         ]
-    },
-    {
-      "group": "Use Cases",
-      "pages": [
-        {
-          "group": "Cross-Industry Solutions",
-          "pages": [
-            "use-cases/cross-industry/knowledge-ops-and-research",
-            "use-cases/cross-industry/customer-ops-and-support",
-            "use-cases/cross-industry/sales-and-revenue",
-            "use-cases/cross-industry/marketing-and-content",
-            "use-cases/cross-industry/hr-and-talent",
-            "use-cases/cross-industry/legal-and-compliance",
-            "use-cases/cross-industry/finance-and-fpa",
-            "use-cases/cross-industry/it-secops-devops",
-            "use-cases/cross-industry/pmo-and-operations",
-            "use-cases/cross-industry/data-and-analytics"
-          ]
-        },
-        {
-          "group": "Industry Solutions",
-          "pages": [
-            "use-cases/industry/education",
-            "use-cases/industry/healthcare",
-            "use-cases/industry/financial-services-and-insurance",
-            "use-cases/industry/manufacturing-and-industry-4-0",
-            "use-cases/industry/retail-and-ecommerce",
-            "use-cases/industry/logistics-and-supply-chain",
-            "use-cases/industry/energy-and-utilities",
-            "use-cases/industry/public-sector-and-gov",
-            "use-cases/industry/life-sciences-and-pharma",
-            "use-cases/industry/construction-and-real-estate"
-          ]
-        },
-        {
-            "group": "Education In Action",
-            "pages": [
-                "use-cases/education/overview",
-                "use-cases/education/personalized-tutoring-in-action",
-                "use-cases/education/new-teacher-onboarding",
-                "use-cases/education/parent-teacher-meeting-prep"
-            ]
-        }
-      ]
-    },
-    {
-      "group": "Core Concepts",
-      "pages": [
-        "core-concepts/the-mindlab-platform",
-        {
-          "group": "Agents",
-          "pages": [
-            "concepts/agents",
-            "core-concepts/agents-in-depth"
-          ]
-        },
-        {
-          "group": "Teams",
-          "pages": [
-            "concepts/teams",
-            "core-concepts/teams-in-depth"
-          ]
-        },
-        {
-          "group": "Models",
-          "pages": [
-            "concepts/models",
-            "core-concepts/models-in-depth"
-          ]
-        },
-        {
-          "group": "Tools",
-          "pages": [
-            "core-concepts/tools-in-depth"
-          ]
-        },
-        {
-            "group": "The Orchestrator",
-            "pages": [
-                "concepts/the-orchestrator",
-                "core-concepts/the-orchestrator-in-depth"
-            ]
-        },
-        {
-            "group": "The Flow Engine",
-            "pages": [
-                "concepts/the-flow-engine",
-                "core-concepts/the-flow-engine-in-depth"
-            ]
-        },
-        {
-            "group": "The Context Spine",
-            "pages": [
-                "concepts/the-context-spine",
-                "core-concepts/the-context-spine-in-depth"
-            ]
-        },
-        {
-            "group": "Continuous Improvement",
-            "pages": [
-                "concepts/how-mindlab-learns",
-                "concepts/continuous-improvement"
-            ]
-        }
-      ]
-    },
-    {
+      },
+      {
         "group": "Platform",
         "pages": [
-            "platform/expert-registry",
-            "platform/evaluation-loop",
-            "platform/production-controls"
+          "platform/expert-registry",
+          "platform/evaluation-loop",
+          "platform/production-controls"
         ]
-    },
-    {
-      "group": "Onboarding & Data",
-      "pages": [
-        "onboarding/white-glove-onboarding",
-        "onboarding/ongoing-data-ingestion",
-        "onboarding/data-security-and-privacy"
-      ]
-    },
-    {
-      "group": "Governance",
-      "pages": [
-        "governance/organizational-model",
-        "governance/domain-packs",
-        "governance/cadance-in-depth",
-        "governance/security-and-compliance-in-depth"
-      ]
-    },
-    {
+      },
+      {
+        "group": "Onboarding & Data",
+        "pages": [
+          "onboarding/white-glove-onboarding",
+          "onboarding/ongoing-data-ingestion",
+          "onboarding/data-security-and-privacy"
+        ]
+      },
+      {
+        "group": "Governance",
+        "pages": [
+          "governance/organizational-model",
+          "governance/domain-packs"
+        ]
+      },
+      {
         "group": "Security",
         "pages": [
-            "security/our-commitment-to-security",
-            "security/ferpa-and-hipaa-compliance"
+          "security/our-commitment-to-security",
+          "security/ferpa-and-hipaa-compliance"
         ]
-    },
-    {
-      "group": "Whitepapers",
-      "pages": [
-        {
-          "group": "Public Whitepaper",
-          "pages": [
-            "public-whitepaper/executive-summary",
-            "public-whitepaper/introduction-and-motivation",
-            "public-whitepaper/mindlab-architecture",
-            "public-whitepaper/cadance-overview",
-            "public-whitepaper/education-proof",
-            "public-whitepaper/controls-and-governance",
-            "public-whitepaper/roadmap",
-            "public-whitepaper/risks-and-mitigations",
-            "public-whitepaper/call-to-action"
-          ]
-        },
-        {
-          "group": "Gated Whitepaper",
-          "pages": [
-            "gated-whitepaper/executive-summary",
-            "gated-whitepaper/introduction-and-motivation",
-            "gated-whitepaper/system-overview",
-            "gated-whitepaper/cadance-specification",
-            "gated-whitepaper/orchestrator",
-            "gated-whitepaper/expert-registry-and-skill-graph",
-            "gated-whitepaper/context-spine",
-            "gated-whitepaper/flow-engine",
-            "gated-whitepaper/evaluation-loop",
-            "gated-whitepaper/controls-security-and-governance",
-            "gated-whitepaper/deployment-and-operations",
-            "gated-whitepaper/benchmarks-and-methodology",
-            "gated-whitepaper/case-studies",
-            "gated-whitepaper/economics-and-business-model",
-            "gated-whitepaper/related-work",
-            "gated-whitepaper/risks-limitations-and-ethics",
-            "gated-whitepaper/roadmap",
-            "gated-whitepaper/conclusion"
-          ]
-        }
-      ]
-    },
-    {
-        "group": "Roadmap",
+      },
+      {
+        "group": "Use Cases",
         "pages": [
-            "roadmap/our-vision"
+          {
+            "group": "Education",
+            "pages": [
+              "use-cases/education/overview",
+              "use-cases/education/personalized-tutoring-in-action",
+              "use-cases/education/new-teacher-onboarding",
+              "use-cases/education/parent-teacher-meeting-prep",
+              "for-students/the-student-portal",
+              "for-students/personalized-tutoring",
+              "for-teachers/the-teacher-workspace",
+              "for-teachers/prep-and-planning",
+              "for-parents/the-parent-view",
+              "for-parents/transparent-progress-updates",
+              "for-school-leaders/admin-insight-dashboard",
+              "for-school-leaders/program-and-curriculum-evaluation",
+              "for-administrators/managing-workspaces",
+              "for-administrators/provisioning-agents"
+            ]
+          },
+          {
+            "group": "Cross-Industry",
+            "pages": [
+              "use-cases/cross-industry/customer-ops-and-support",
+              "use-cases/cross-industry/data-and-analytics",
+              "use-cases/cross-industry/finance-and-fpa",
+              "use-cases/cross-industry/hr-and-talent",
+              "use-cases/cross-industry/it-secops-devops",
+              "use-cases/cross-industry/knowledge-ops-and-research",
+              "use-cases/cross-industry/legal-and-compliance",
+              "use-cases/cross-industry/marketing-and-content",
+              "use-cases/cross-industry/pmo-and-operations",
+              "use-cases/cross-industry/sales-and-revenue"
+            ]
+          },
+          {
+            "group": "Industry",
+            "pages": [
+              "use-cases/industry/construction-and-real-estate",
+              "use-cases/industry/energy-and-utilities",
+              "use-cases/industry/financial-services-and-insurance",
+              "use-cases/industry/healthcare",
+              "use-cases/industry/life-sciences-and-pharma",
+              "use-cases/industry/logistics-and-supply-chain",
+              "use-cases/industry/manufacturing-and-industry-4-0",
+              "use-cases/industry/public-sector-and-gov",
+              "use-cases/industry/retail-and-ecommerce"
+            ]
+          }
         ]
-    },
-    {
+      },
+      {
+        "group": "Whitepapers",
+        "pages": [
+          {
+            "group": "Public Whitepaper",
+            "pages": [
+              "public-whitepaper/executive-summary",
+              "public-whitepaper/introduction-and-motivation",
+              "public-whitepaper/mindlab-architecture",
+              "public-whitepaper/cadance-overview",
+              "public-whitepaper/education-proof",
+              "public-whitepaper/controls-and-governance",
+              "public-whitepaper/roadmap",
+              "public-whitepaper/risks-and-mitigations",
+              "public-whitepaper/call-to-action"
+            ]
+          },
+          {
+            "group": "Gated Whitepaper",
+            "pages": [
+              "gated-whitepaper/executive-summary",
+              "gated-whitepaper/introduction-and-motivation",
+              "gated-whitepaper/system-overview",
+              "gated-whitepaper/cadance-specification",
+              "gated-whitepaper/orchestrator",
+              "gated-whitepaper/expert-registry-and-skill-graph",
+              "gated-whitepaper/context-spine",
+              "gated-whitepaper/flow-engine",
+              "gated-whitepaper/evaluation-loop",
+              "gated-whitepaper/controls-security-and-governance",
+              "gated-whitepaper/deployment-and-operations",
+              "gated-whitepaper/benchmarks-and-methodology",
+              "gated-whitepaper/case-studies",
+              "gated-whitepaper/economics-and-business-model",
+              "gated-whitepaper/related-work",
+              "gated-whitepaper/risks-limitations-and-ethics",
+              "gated-whitepaper/roadmap",
+              "gated-whitepaper/conclusion"
+            ]
+          }
+        ]
+      },
+      {
         "group": "Development",
         "pages": [
-            "development",
-            "README"
+          "development",
+          "snippets/snippet-intro",
+          "README"
         ]
-    }
-  ],
+      }
+    ]
+  },
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg"
