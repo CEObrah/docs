@@ -1,0 +1,28 @@
+---
+title: "The MindLab Platform"
+description: "An overview of the MindLab platform."
+icon: "brain-circuit"
+---
+
+The MindLab platform is a sophisticated, enterprise-grade intelligence layer designed to solve the critical challenges of AI adoption in business. It is not a single AI, but a coordinated ecosystem of specialist agents that are managed by a powerful orchestration engine.
+
+## The MindLab Difference
+
+What sets MindLab apart from other AI platforms is our focus on three key areas:
+
+-   **Persistent Memory:** Our agents have the ability to learn and remember, creating a compounding knowledge asset for your organization.
+-   **Intelligent Orchestration:** Our platform intelligently manages workflows, ensuring that the right agent is assigned to the right task at the right time.
+-   **Enterprise-Grade Security and Control:** Our platform is built to meet the strictest security and compliance standards.
+
+## A New Way of Working
+
+MindLab is more than just a tool; it is a new way of working. By providing a persistent, adaptive intelligence layer, we empower your teams to work smarter, faster, and more effectively.
+
+## Core Components
+
+-   **Orchestrator (runtime MoE):** Converts high-level objectives into a DAG or state machine of sub-tasks, routes each to the best agent and enforces policies. It supports dynamic topologies such as Planner→Solver→Reviewer→Verifier.
+-   **Expert Registry:** A directed skill graph of typed specialists (agents). Each agent advertises its capabilities, constraints, tool affordances and load limits. Hard filters (e.g., policy, data boundaries) and soft priors (confidence, historical success) determine eligibility.
+-   **Context Spine (knowledge + memory):** A tiered memory system (scratchpad, session, user/team, durable) with hybrid retrieval. It stores domain knowledge (docs, tables, specs), conversation histories and long-term summaries. Retrieval strategies are planning-aware and evidence-first, returning citations alongside results.
+-   **Flow Engine:** A deterministic, stateful execution layer that runs workflows as DAGs/state machines with retries, guards and compensation. It ensures idempotence and supports time-travel debugging (replays & diffs).
+-   **Evaluation Loop:** Continuously measures outputs via golden tasks, rubric scoring and adversarial review. Signals shape policy routing and gating without retraining models.
+-   **Controls, Security & Governance:** Implements RBAC, budgets, audit logs, HITL checkpoints and data residency. Data belongs to the organization and is never used to train foundation models.

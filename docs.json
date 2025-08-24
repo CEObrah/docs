@@ -2,10 +2,10 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "linden",
   "name": "MindLab",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+ "colors": {
+    "primary": "#f95c65",
+    "light": "#ff8c91",
+    "dark": "#d93f3f"
   },
   "favicon": "/favicon.svg",
   "navigation": {
@@ -13,8 +13,7 @@
       {
         "group": "Home",
         "pages": [
-          "introduction/welcome",
-          "quickstart"
+          "introduction/welcome"
         ]
       },
       {
@@ -186,14 +185,6 @@
               "gated-whitepaper/conclusion"
             ]
           }
-        ]
-      },
-      {
-        "group": "Development",
-        "pages": [
-          "development",
-          "snippets/snippet-intro",
-          "README"
         ]
       }
     ]

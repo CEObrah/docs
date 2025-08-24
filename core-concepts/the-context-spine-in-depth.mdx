@@ -17,3 +17,10 @@ The Context Spine is not a monolithic database; it is a tiered system designed t
 -   **Session Memory:** Context that persists for the duration of a single user session.
 -   **User/Team Memory:** Durable memory that is scoped to a specific user or team.
 -   **Durable Summaries:** Periodically, the system synthesizes the most important information from the other memory tiers into durable summaries.
+
+```mermaid
+graph TD
+    A[Scratchpads] --> B(Session Memory);
+    B --> C{User/Team Memory};
+    C --> D[Durable Summaries];
+```
