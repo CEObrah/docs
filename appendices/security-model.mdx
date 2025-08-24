@@ -1,0 +1,23 @@
+---
+title: "Appendix D: Security Model"
+description: "A detailed overview of our security model."
+---
+
+Our security model is designed to provide a comprehensive, defense-in-depth approach to protecting your data.
+
+## Data Flow
+
+<Frame>
+  <img src="/images/data-flow.png" alt="Data flow diagram" />
+</Frame>
+
+## RBAC Matrix
+
+| Role                | Org Admin | Workspace Manager | Member | Viewer |
+| ------------------- | :-------: | :---------------: | :----: | :----: |
+| **Governance**      |     ✅     |         ✅         |   ❌   |   ❌   |
+| **Policy**          |     ✅     |         ✅         |   ❌   |   ❌   |
+| **Scope**           |     ✅     |         ✅         |   ❌   |   ❌   |
+| **Approvals**       |     ✅     |         ✅         |   ✅   |   ❌   |
+| **Execute/Review**  |     ✅     |         ✅         |   ✅   |   ❌   |
+| **Read-Only**       |     ✅     |         ✅         |   ✅   |   ✅   |

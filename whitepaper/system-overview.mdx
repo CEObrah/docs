@@ -1,0 +1,47 @@
+---
+title: "2. System Overview"
+description: "MindLab sits above your apps and below your workflows—coordinating “the work behind the work.”"
+---
+
+MindLab sits above your apps and below your workflows—coordinating “the work behind the work.” It is an intelligence layer that is designed to be the single source of truth for all of your AI-driven work.
+
+## Core Components
+
+<AccordionGroup>
+  <Accordion title="Orchestrator">
+    A runtime Mixture-of-Experts (MoE) engine that intelligently coordinates the work of specialized agents.
+  </Accordion>
+  <Accordion title="Expert Registry">
+    A directed skill graph of typed specialist agents.
+  </Accordion>
+  <Accordion title="Context Spine">
+    A stateful architecture for managing knowledge and memory.
+  </Accordion>
+  <Accordion title="Flow Engine">
+    A deterministic, stateful execution layer for guaranteed outcomes.
+  </Accordion>
+  <Accordion title="Evaluation Loop">
+    A continuous process for ensuring measured, reliable quality.
+  </Accordion>
+  <Accordion title="Controls">
+    A suite of robust controls that ensure safety, stability, and auditability in a production environment.
+  </Accordion>
+</AccordionGroup>
+
+```mermaid
+graph TD
+    subgraph Control Plane
+        A[Orchestrator]
+    end
+    subgraph Data Plane
+        B[Expert Registry]
+        C[Context Spine]
+        D[Flow Engine]
+        E[Evaluation Loop]
+        F[Controls]
+    end
+    A --> B
+    A --> C
+    A --> D
+    A --> E
+    A --> F
